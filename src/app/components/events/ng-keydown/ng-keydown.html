@@ -4,6 +4,7 @@
   </div>
   <div class="content">
     <p>Key Down Counter: {{ $ctrl.counter }}</p>
-    <input class="form-control" ng-keydown="$ctrl.performAction()"/>
+
+    <input type="text" class="form-control" ng-keydown="$ctrl.performAction()" placeholder="Keydown..">
   </div>
 </div>

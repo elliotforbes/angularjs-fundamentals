@@ -1,0 +1,20 @@
+<div class="component">
+  <div class="header">
+    <h2>ng-keydown</h2>
+  </div>
+  <div class="content">
+    <p>Key Down Counter: {{ $ctrl.counter }}</p>
+    
+    <input class="form-control" ng-keydown="$ctrl.performAction()" placeholder="Keydown Change..."/>
+    <input class="form-control" ng-keypress="$ctrl.performAction()" placeholder="Keypress change..."/>
+    <button class="btn btn-primary" ng-click="$ctrl.performAction()">Click Me!</button>
+    <button class="btn btn-primary" ng-dblclick="$ctrl.performAction()">Double Click Me!</button>
+    <p ng-copy="$ctrl.performAction()">Copy text from me!</p>
+    <textarea class="form-control" ng-cut="$ctrl.performAction()" cols="30" rows="10">Cut text from me!</textarea>
+    <input type="text" class="form-control" ng-focus="$ctrl.performAction()" placeholder="Focus on me..."/>
+    <p ng-mouseenter="$ctrl.performAction()">Mouse Enter event</p>
+    <p ng-mouseleave="$ctrl.performAction()">Mouse Leave event</p>
+    <input type="text" class="form-control" ng-paste="$ctrl.performAction" placeholder="paste into me..."/>
+
+    </div>
+</div>
