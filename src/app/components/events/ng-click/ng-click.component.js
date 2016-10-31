@@ -1,6 +1,9 @@
 var ngClickComponent = {
   templateUrl: 'app/components/events/ng-click/ng-click.html',
-  controller: NgClickController
+  controller: NgClickController,
+  binding: {
+    counter: '<'
+  }
 }
 
 angular.module('root')
