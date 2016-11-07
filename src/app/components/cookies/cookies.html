@@ -1,0 +1,16 @@
+<div class="component">
+  <div class="header">
+    <h2>Cookies Demo</h2>
+  </div>
+  <div class="content">
+    <p>Enter what you want to store in your cookie in the input box below and click the submit button.</p>
+    <p>When you refresh the page you should see your cookie below:</p>
+    <p>Info Stored in Cookie: <b>{{ $ctrl.storedCookie }}</b></p>
+    <div class="form-group">
+      <label>Set Cookie</label>
+      <input class="form-control" placeholder="cookie" ng-model="$ctrl.cookie"/>
+      <br/>
+      <button class="btn btn-primary" ng-click="$ctrl.storeCookie($ctrl.cookie)">Store Cookie</button>
+    </div>
+  </div>
+</div>

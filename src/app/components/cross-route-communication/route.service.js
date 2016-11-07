@@ -1,24 +1,24 @@
-function RouteService($log) {
+function StorageService($log) {
 
-  var RouteService = {};
+  var StorageService = {};
 
   var storage = [];
 
-  RouteService.store = function(object) {
+  StorageService.store = function(object) {
     $log.log(object);
     this.storage = object;
     $log.log(this.storage);
   }
 
-  RouteService.getStore = function() {
+  StorageService.getStore = function() {
     return this.storage;
   }
 
 
-  return RouteService;
+  return StorageService;
 }
 
-RouteService.$inject = ['$log'];
+StorageService.$inject = ['$log'];
 
 angular.module('root')
-  .factory('RouteService', RouteService);
+  .factory('StorageService', StorageService);

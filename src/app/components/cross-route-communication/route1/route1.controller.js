@@ -1,19 +1,20 @@
-function Route1Controller($log, RouteService) {
+function Route1Controller($log, StorageService) {
   var ctrl = this;
 
   ctrl.storage = [];
 
   this.$onInit = function() {
-    ctrl.storage = RouteService.getStore();
+    ctrl.storage = StorageService.getStore();
   }
 
   ctrl.store = function(object) {
-    RouteService.store(object);
+    StorageService.store(object);
   }
+
 
 }
 
-Route1Controller.$inject = ['$log', 'RouteService'];
+Route1Controller.$inject = ['$log', 'StorageService'];
 
 angular.module('root')
   .controller('Route1Controller', Route1Controller);
